@@ -2,32 +2,35 @@
  * Platform-Specific Definitions
  * 
  * This header provides platform-specific macros and definitions
- * to ensure compatibility across different operating systems.
- * Currently supports BSD-based systems (macOS, FreeBSD) and Linux.
+ * for macOS compatibility.
  *
  * Key Features:
- * - Platform detection macros
  * - Network-related includes
- * - Cross-platform compatibility
+ * - macOS-specific definitions
  */
 
 #ifndef PLATFORM_H
 #define PLATFORM_H
 
-#include <sys/types.h>      // System types
-#include <netinet/in.h>     // Internet address family
-#include <arpa/inet.h>      // Internet operations
+/*
+ * Platform detection
+ * PLATFORM_MACOS: Defined for macOS systems
+ */
+#if !defined(__APPLE__)
+    #error "This software only supports macOS"
+#endif
+
+#define PLATFORM_MACOS
 
 /*
- * Platform Detection Macros
- * 
- * PLATFORM_BSD: Defined for BSD-based systems (macOS, FreeBSD)
- * PLATFORM_LINUX: Defined for Linux-based systems
+ * Include required headers for network operations
  */
-#if defined(__APPLE__) || defined(__FreeBSD__)
-    #define PLATFORM_BSD
-#elif defined(__linux__)
-    #define PLATFORM_LINUX
-#endif
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <net/if.h>
+#include <netinet/ip.h>
+#include <netinet/udp.h>
 
 #endif // PLATFORM_H
