@@ -32,14 +32,14 @@ Install the project:
 
 <div class="code-block">
 <pre><code class="language-bash">./script/install.sh</code></pre>
-<button class="copy-button" onclick="copyCode(this)">Copy</button>
+<button class="copy-button"></button>
 </div>
 
 Build the project:
 
 <div class="code-block">
 <pre><code class="language-bash">./scripts/build.sh</code></pre>
-<button class="copy-button" onclick="copyCode(this)">Copy</button>
+<button class="copy-button"></button>
 </div>
 
 The build script will automatically check and install all required dependencies using Homebrew.
@@ -50,15 +50,17 @@ Basic usage:
 
 <div class="code-block">
 <pre><code class="language-bash">sudo ./cmap -i <interface> -O <output.pcap></code></pre>
-<button class="copy-button" onclick="copyCode(this)">Copy</button>
+<button class="copy-button"></button>
 </div>
 
 Example command:
 
 <div class="code-block">
 <pre><code class="language-bash">cmap -i en0 -a -d -O capture.pcap</code></pre>
-<button class="copy-button" onclick="copyCode(this)">Copy</button>
+<button class="copy-button"></button>
 </div>
+
+
 
 ### Options:
 | Option | Description |
