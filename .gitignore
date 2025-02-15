@@ -1,0 +1,36 @@
+# Build artifacts
+cmap
+docs/cmap
+*.o
+*.a
+*.so
+*.dylib
+
+# Debug symbols
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Capture files
+*.pcap
+*.pcapng
+
+# Dependencies
+*.d
+
+# Temporary files
+*.log
+*.tmp

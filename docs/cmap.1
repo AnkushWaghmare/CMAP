@@ -1,0 +1,74 @@
+.TH CMAP 1 "January 2025" "User Commands" "Version 1.0.1"
+
+.SH NAME
+       cmap \- VoIP Call Monitor and Analyzer
+
+.SH SYNOPSIS
+       cmap [\-i interface] [\-O output.pcap] [\-t seconds] [\-a] [\-d] [\-l] [\-s] [\-h] [\-v]
+
+.SH DESCRIPTION
+       Captures and analyzes VoIP calls using SIP and RTP protocols.
+
+.SH OPTIONS
+       \-i, \-\-interface <if>
+              Network interface to capture from (e.g., eth0, en0)
+
+       \-O, \-\-output <file>
+              Output file in PCAP format for packet capture
+
+       \-t, \-\-time <seconds>
+              Stop capturing after specified time in seconds
+
+       \-a, \-\-auto
+              Auto mode \- automatically stop when call ends
+
+       \-d, \-\-debug
+              Enable debug output for troubleshooting
+
+       \-l, \-\-list
+              List all available network interfaces
+
+       \-s, \-\-silent
+              Suppress all output (quiet mode)
+
+       \-h, \-\-help
+              Show this help message and command usage
+
+       \-v, \-\-version
+              Show version information
+
+.SH EXAMPLES
+       cmap \-i eth0                    # Capture on interface eth0
+       cmap \-i eth0 \-O capture.pcap    # Save to PCAP file
+       cmap \-i eth0 \-t 300            # Capture for 5 minutes
+       cmap \-i eth0 \-a \-d            # Auto mode with debug
+       cmap \-i eth0 \-s                # Silent capture
+
+.SH EXIT STATUS
+.TP
+.B 0
+Successful program execution
+.TP
+.B 1
+Invalid command line option
+.TP
+.B 2
+Interface not found or permission denied
+
+.SH FILES
+       /etc/cmap/config                System-wide configuration file
+       ~/.config/cmap/config           User-specific configuration file
+       /var/log/cmap.log               Debug log file location (when debug enabled)
+
+.SH ENVIRONMENT
+       CMAP_DEBUG                      When set to 1, enables debug output (same as \-d)
+       CMAP_SILENT                     When set to 1, enables silent mode (same as \-s)
+
+.SH AUTHOR
+       Written by the Codeium Engineering Team.
+
+.SH COPYRIGHT
+       Copyright \(co 2025 Codeium. License GPLv3+
+
+.SH SEE ALSO
+       wireshark(1), tcpdump(1), tshark(1)Password:
