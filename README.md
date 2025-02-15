@@ -28,7 +28,14 @@ A real-time VoIP traffic monitoring and analysis tool that captures and analyzes
 
 ## 🚀 Installation
 
-Build and install the project:
+Install the project:
+
+<div class="code-block">
+<pre><code class="language-bash">./script/install.sh</code></pre>
+<button class="copy-button" onclick="copyCode(this)">Copy</button>
+</div>
+
+Build the project:
 
 <div class="code-block">
 <pre><code class="language-bash">./scripts/build.sh</code></pre>
@@ -37,13 +44,19 @@ Build and install the project:
 
 The build script will automatically check and install all required dependencies using Homebrew.
 
-
 ## 💡 Usage
 
 Basic usage:
 
 <div class="code-block">
 <pre><code class="language-bash">sudo ./cmap -i <interface> -O <output.pcap></code></pre>
+<button class="copy-button" onclick="copyCode(this)">Copy</button>
+</div>
+
+Example command:
+
+<div class="code-block">
+<pre><code class="language-bash">cmap -i en0 -a -d -O capture.pcap</code></pre>
 <button class="copy-button" onclick="copyCode(this)">Copy</button>
 </div>
 
@@ -75,91 +88,13 @@ src/
 
 We welcome contributions! Please feel free to submit pull requests.
 
-1. Fork the repository
-2. Create your feature branch:
-<div class="code-block">
-<pre><code class="language-bash">git checkout -b feature/amazing-feature</code></pre>
-<button class="copy-button" onclick="copyCode(this)">Copy</button>
-</div>
-
-3. Commit your changes:
-<div class="code-block">
-<pre><code class="language-bash">git commit -m 'Add some amazing feature'</code></pre>
-<button class="copy-button" onclick="copyCode(this)">Copy</button>
-</div>
-
-4. Push to the branch:
-<div class="code-block">
-<pre><code class="language-bash">git push origin feature/amazing-feature</code></pre>
-<button class="copy-button" onclick="copyCode(this)">Copy</button>
-</div>
-
-5. Open a Pull Request
-
 ## 👥 Authors
 
-- [Your names here]
+- Ankush waghmare
+- Deepak koli
+- Aagam shah
+- Kartik kokane 
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-<style>
-.code-block {
-	position: relative;
-	margin: 10px 0;
-}
-
-.copy-button {
-	position: absolute;
-	top: 5px;
-	right: 5px;
-	padding: 5px 10px;
-	background-color: #4CAF50;
-	color: white;
-	border: none;
-	border-radius: 3px;
-	cursor: pointer;
-	opacity: 0.8;
-}
-
-.copy-button:hover {
-	opacity: 1;
-}
-
-pre {
-	background-color: #f6f8fa;
-	padding: 16px;
-	border-radius: 6px;
-	overflow: auto;
-}
-
-table {
-	width: 100%;
-	border-collapse: collapse;
-	margin: 20px 0;
-}
-
-th, td {
-	padding: 12px;
-	text-align: left;
-	border-bottom: 1px solid #ddd;
-}
-
-th {
-	background-color: #f6f8fa;
-}
-</style>
-
-<script>
-function copyCode(button) {
-	const pre = button.parentElement.querySelector('pre');
-	const code = pre.textContent;
-	navigator.clipboard.writeText(code);
-	
-	button.textContent = 'Copied!';
-	setTimeout(() => {
-		button.textContent = 'Copy';
-	}, 2000);
-}
-</script>
